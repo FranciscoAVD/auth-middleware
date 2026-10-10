@@ -1,0 +1,57 @@
+{
+  "name": "@vicstack/auth-middleware",
+  "version": "0.1.0",
+  "description": "Hono middleware for session, auth, and permission checks against a Better-Auth-shaped auth instance.",
+  "license": "MIT",
+  "author": "Victoriano <fvictoriano.dev@gmail.com>",
+  "keywords": [
+    "hono",
+    "better-auth",
+    "auth",
+    "middleware",
+    "permissions"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranciscoAVD/auth-middleware.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FranciscoAVD/auth-middleware/issues"
+  },
+  "homepage": "https://github.com/FranciscoAVD/auth-middleware#readme",
+  "type": "module",
+  "module": "./dist/index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && bun build ./src/index.ts --outdir ./dist --target node --format esm",
+    "test": "bun test",
+    "prepublishOnly": "bun run test && bun run build"
+  },
+  "dependencies": {
+    "@vicstack/http": "^0.1.0",
+    "@vicstack/try-catch": "^0.1.0",
+    "hono": "^4.13.13"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
