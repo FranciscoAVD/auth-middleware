@@ -1,6 +1,6 @@
 {
   "name": "@vicstack/auth-middleware",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Hono middleware for session, auth, and permission checks against a Better-Auth-shaped auth instance.",
   "license": "MIT",
   "author": "Victoriano <fvictoriano.dev@gmail.com>",
@@ -44,14 +44,15 @@
   },
   "dependencies": {
     "@vicstack/http": "^0.1.0",
-    "@vicstack/try-catch": "^0.1.0",
-    "hono": "^4.13.13"
+    "@vicstack/try-catch": "^0.1.0"
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "hono": "^4.13.13",
     "typescript": "^5"
   },
   "peerDependencies": {
+    "hono": "^4.13.13",
     "typescript": "^5"
   }
 }

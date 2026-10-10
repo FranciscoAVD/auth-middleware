@@ -7,13 +7,14 @@
       "dependencies": {
         "@vicstack/http": "^0.1.0",
         "@vicstack/try-catch": "^0.1.0",
-        "hono": "^4.13.13",
       },
       "devDependencies": {
         "@types/bun": "latest",
+        "hono": "^4.13.13",
         "typescript": "^5",
       },
       "peerDependencies": {
+        "hono": "^4.13.13",
         "typescript": "^5",
       },
     },
