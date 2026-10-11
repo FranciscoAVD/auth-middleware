@@ -1,6 +1,6 @@
 {
   "name": "@vicstack/auth-middleware",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Hono middleware for session, auth, and permission checks against a Better-Auth-shaped auth instance.",
   "license": "MIT",
   "author": "Victoriano <fvictoriano.dev@gmail.com>",
@@ -38,12 +38,12 @@
     "access": "public"
   },
   "scripts": {
-    "build": "rm -rf dist && tsc -p tsconfig.build.json && bun build ./src/index.ts --outdir ./dist --target node --format esm",
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && bun build ./src/index.ts --outdir ./dist --target node --format esm --external hono --external '@vicstack/*'",
     "test": "bun test",
     "prepublishOnly": "bun run test && bun run build"
   },
   "dependencies": {
-    "@vicstack/http": "^0.1.0",
+    "@vicstack/http": "^0.2.0",
     "@vicstack/try-catch": "^0.1.0"
   },
   "devDependencies": {
